@@ -3,6 +3,7 @@ describe("newsLetter Subscribe Form", () => {
     cy.visit('http://localhost:3000/')
     })
 
+    context("subscribe section",()=>{
     it("allows user to subscribe to the email list",() => {
 
     cy.getByData("email-input").type("Beatris.Dimitrovaaa@gmail.com")
@@ -25,5 +26,6 @@ describe("newsLetter Subscribe Form", () => {
     contains("Error: john@example.com already exists. Please use a different email address")
     })
 
+})
 
 }) 
